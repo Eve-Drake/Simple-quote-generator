@@ -1,13 +1,89 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Roboto:wght@300&display=swap');
+
+*{
+  margin: auto; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app{
+  height: 100vh;
+  background-color: #92b3f18c;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 10px ;
+}
+
+.quote {
+  font-size: larger;
+  margin: auto;
+  width: 50%;
+  min-height: 80vh;
+  padding: 10px;
+  background-color: #ecd4acda;
+  border-radius: 15px;
+  text-align: center;
+  height: 50%;
+}
+
+button{
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: .3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-align: center;
+  padding: 15px;
+  color: #616467;
+  box-shadow: inset 0 0 0 1px #616467;
+  height: 50px;
+}
+
+button:hover{
+  color: rgba(245, 222, 179, 0.795);
+  background-color: #616467;
+}
+
+.script{
+  font-family: 'Pinyon Script', cursive;
+}
+
+.easy{
+  font-family: 'Roboto', sans-serif;
+}
+
+.toggleSwitch{
+  padding: 20px;
+  margin: 1px;
+}
+
+.toggle{
+  
+  -webkit-appearance: none;
+  position: relative;
+  width: 30px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.toggle::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(127, 127, 127);
+  transition: left .3s;
+}
+
+.toggle:checked::after{
+  left: 60%;
 }
